@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="edu.css">
+<title>🎓EducationSuppor</title>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">🎓EducationSupport</div>
+  <div class="nav-buttons">
+    <a href="login.html" ><button class="btn-outline">Login</button></a>
+   <a href="start.html"><button class="btn-primary">Get Started</button></a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero fade" id="back">
+  <h1 class="edu">Education Should Never Wait</h1>
+  <p>Connecting students who need financial support with donors, scholarships, and sponsors. Make education accessible for everyone.</p>
+  <a href="start.html" ><button class="btn-primary">Start Your Journey</button></a>
+
+</section><br><br>
+
+<!-- How -->
+<section class="how fade">
+  <h2 class="logo1">How It Works</h2><br><br>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>For Students</h3>
+      <p>
+Create campaigns, apply for scholarships, access student loans, and get matched with sponsors who care about your education.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>For Donors</h3>
+      <p>Browse student profiles, support campaigns, and make a direct impact on someone's educational journey.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>For Institutions</h3>
+      <p>Verify students, create scholarship programs, and help your community access financial support</p>
+    </div>
+  </div>
+</section><br><br><br><br>
+
+<!-- Stats -->
+<section class="stats fade">
+  <div class="stat">
+    <h2 class="count">1000+</h2>
+    <p>Students</p>
+  </div>
+  <div class="stat">
+    <h2 class="count">2000000+</h2>
+    <p>Funds</p>
+  </div>
+  <div class="stat">
+    <h2 class="count">150+</h2>
+    <p>Scholarships</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade">
+  <h1>Ready to Make a Difference?</h1>
+  <p>Whether you're a student seeking support or a donor wanting to help, join TuitionBridge today.</p>
+  <a href="start.html" ><button class="btn-primary">Join Now</button></a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <h2>🎓EducationSuppor</h2>
+  <p>© 2026 TuitionBridge</p>
+</footer>
+
+<script>
+// Fade animation on scroll
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+
+// Counter animation
+const counters = document.querySelectorAll('.count');
+
+counters.forEach(counter => {
+  let target = +counter.innerText.replace(/\D/g,'');
+  let count = 0;
+
+  function update(){
+    if(count < target){
+      count += target / 100;
+      counter.innerText = Math.floor(count) + "+";
+      requestAnimationFrame(update);
+    }else{
+      counter.innerText = target + "+";
+    }
+  }
+
+  update();
+});
+</script>
+
+</body>
+</html>

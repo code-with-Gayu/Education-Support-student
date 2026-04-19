@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🌤️ Sky Blue Gradient */
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+/* Center Content */
+.container{
+  text-align:center;
+  width:100%;
+  font-family: 'Times New Roman', Times, serif;
+  padding:20px;
+  
+}
+.container h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.container p{
+    font-size: 15px;
+}
+/* 🎯 Glass Login Box */
+.login-box{
+  margin:auto;
+  margin-top:20px;
+  padding:30px;
+  width:100%;
+  max-width:350px;
+font-family: 'Times New Roman', Times, serif;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+
+  border-radius:15px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.2);
+
+  /* Animation */
+  opacity:0;
+  transform: translateY(50px);
+  animation: showBox 1s ease forwards;
+}
+
+@keyframes showBox{
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* 📝 Inputs */
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  outline:none;
+  background: rgba(255,255,255,0.7);
+  transition:0.3s;
+}
+
+input:focus{
+  background:white;
+  box-shadow:0 0 5px #4facfe;
+}
+
+/* 🔥 Button Animation */
+button{
+  width:100%;
+  padding:12px;
+  background:#2f5d50;
+  color:white;
+  border:none;
+  border-radius:8px;
+  margin-top:10px;
+  cursor:pointer;
+  font-size:16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+button:hover{
+  transform: scale(1.05);
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  color: black;
+}
+
+/* Click Effect */
+button:active{
+  transform: scale(0.95);
+}
+
+/* Link */
+.link{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.link span{
+  color:#0072ff;
+  cursor:pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width:500px){
+  .login-box{
+    padding:20px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>🎓EducationSupport</h1><br>
+  <h2>Welcome Back</h2>
+  <p>Log in to continue your journey</p>
+
+  <div class="login-box">
+    <label>Email</label>
+    <input type="text" placeholder="Enter email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter password">
+
+   <a href="overview.html"><button>Login</button></a>
+
+    <p class="link">Don't have an account? <span>Register</span></p>
+  </div>
+</div>
+
+</body>
+</html>

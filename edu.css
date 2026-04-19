@@ -1,0 +1,284 @@
+/* 🌈 Color Variables (easy change later) */
+:root{
+  --primary: #4f46e5;   /* Indigo */
+  --secondary: #06b6d4; /* Cyan */
+  --accent: #22c55e;    /* Green */
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --light-text: #64748b;
+  --card-bg: #ffffff;
+}
+
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  position: sticky;
+  top:0;
+  z-index:1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  background: linear-gradient(to right,var(--primary),var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.logo1{
+    font-weight: bold;
+  font-size: 22px;
+  background: linear-gradient(to right,var(--primary),var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(to right,var(--primary),var(--secondary));
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  color: #060606;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+    transition: 0.3s;
+}
+.btn-outline:hover{
+  background-color: #d8ab49;
+  color: #ffffff;
+   transform: scale(1.05);
+  opacity: 0.9;
+}
+#back{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("edu.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+  
+}
+
+
+
+
+/* Heading */
+#back h1{
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 15px;
+  color: #1b5761;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Paragraph */
+#back p{
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #070707;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+   border-radius: 15px 50px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  width: 250px;
+border-radius: 15px 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg,#b6bfdd,#a2dadd);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border: 3px solid var(--secondary);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  
+}
+.card h3{
+  margin: 10px 0;
+}
+
+.card p{
+  font-size: 14px;
+  line-height: 1.6;
+}
+.icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: var(--primary);
+  align-items: center;
+  text-align: center;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: linear-gradient(to right,#6d7aa4,#ecfeff);
+  flex-wrap: wrap;
+}
+
+.stat h2 {
+  font-size: 34px;
+  color: var(--primary);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h1 {
+  font-size: 34px;
+  background: linear-gradient(to right,var(--primary),var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cta p {
+  max-width: 600px;
+  margin: 20px auto;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right,#1e293b,#0f172a);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Animations */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px){
+
+  /* Navbar */
+  .navbar{
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-outline{
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Hero Section */
+  #back{
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  #back h1{
+    font-size: 24px;
+  }
+
+  #back p{
+    font-size: 14px;
+  }
+
+  /* Cards */
+  .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Stats */
+  .stats{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .stat h2{
+    font-size: 26px;
+  }
+
+  /* CTA */
+  .cta h1{
+    font-size: 24px;
+  }
+
+  .cta p{
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* Footer */
+  .footer{
+    font-size: 14px;
+  }
+}
